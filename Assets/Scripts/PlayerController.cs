@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour{
 	
@@ -79,6 +80,11 @@ public class PlayerController : MonoBehaviour{
 		}
 		horizontalInput = Input.GetAxis("Horizontal");
 		transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
+		//game over scene plays when lives go below zero
+		if (lives < 0) {
+			SceneManager.LoadScene(4);
+		}
     }
 	
 	private void updateLives(){
@@ -88,12 +94,12 @@ public class PlayerController : MonoBehaviour{
 	
 	private void OnCollisionEnter(Collision collision){
 		isOnGround = true;
+
 		
 		
 		//green portal 
 		if (collision.gameObject == greenPortal){
 			transform.position = greenPortal2Position;
-			
 		}
 		if (collision.gameObject == greenPortal2){
 			transform.position = greenPortalPosition;
@@ -124,6 +130,7 @@ public class PlayerController : MonoBehaviour{
 		//finishDoor
 		if (collision.gameObject == finishDoor && keyCollected == true){
 			Debug.Log("Level 1 complete");
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//sends player to next level when current one complete
 		}
 		
 		//life lost
@@ -133,23 +140,3 @@ public class PlayerController : MonoBehaviour{
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
