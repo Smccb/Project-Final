@@ -890,6 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04064c49bf196c94094a2ac3eda8c2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySlider: {fileID: 1192121480}
 --- !u!1 &670351495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3452,7 +3453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 10
+  m_DragThreshold: 20
 --- !u!4 &1706886394
 Transform:
   m_ObjectHideFlags: 0

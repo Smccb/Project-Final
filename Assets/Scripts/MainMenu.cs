@@ -34,4 +34,13 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+	
+	public GameObject mySlider;
+	
+	void update(){
+		GetComponent<AudioSource>().volume = mySlider.VolumeSlider.value;
+	}
+	
+
+
 }
