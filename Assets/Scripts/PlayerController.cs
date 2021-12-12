@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour{
 	public float horizontalInput;
 	private float speed = 10.0f;
 	private float xRange = 25.0f;
+	
+	//sound effects
+	private AudioSource playerAudio;
+	public AudioClip jumpSound;
 
 
 	//player start position
@@ -50,6 +54,8 @@ public class PlayerController : MonoBehaviour{
 		playerRb = GetComponent<Rigidbody>();
 		lives = 3;
 		livesText.text = "Lives: " + lives;
+		
+		playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +64,8 @@ public class PlayerController : MonoBehaviour{
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround){
 			playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
 			isOnGround = false;
+			
+			playerAudio.PlayOneShot(jumpSound, 1.0f);
 		}
 		
 		horizontalInput = Input.GetAxis("Horizontal");
