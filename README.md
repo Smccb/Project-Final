@@ -3,4 +3,4 @@ Word doc in repository has info on group work and who worked on what parts of th
 
 to run the webgl you need to add /myBuild/ to the url.
 
-https://smccb.github.io/Project-Alpha/myBuild/
+https://smccb.github.io/Project-Final/myBuild/
