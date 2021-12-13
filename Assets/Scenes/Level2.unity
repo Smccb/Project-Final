@@ -752,6 +752,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1190103261515542431, guid: 38bb8477d31e76a4dbf1a000086b7892, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2117906613181124926, guid: 38bb8477d31e76a4dbf1a000086b7892, type: 3}
       propertyPath: m_Name
       value: PortalLevel2
@@ -774,7 +778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2867006986538236253, guid: 38bb8477d31e76a4dbf1a000086b7892, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 60.15
+      value: 59.23
       objectReference: {fileID: 0}
     - target: {fileID: 2867006986729026587, guid: 38bb8477d31e76a4dbf1a000086b7892, type: 3}
       propertyPath: m_LocalPosition.x
